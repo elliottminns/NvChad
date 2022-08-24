@@ -36,10 +36,4 @@ M.ui = {
   theme = "catppuccin"
 }
 
-M.options = {
-  user = function()
-    vim.opt.colorcolumn = "80"
-  end
-}
-
 return M
