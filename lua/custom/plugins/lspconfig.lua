@@ -73,6 +73,11 @@ lspconfig.rust_analyzer.setup({
   }
 })
 
+lspconfig.clangd.setup({
+  filetypes = {"c", "cpp", "h", "hpp"},
+  root_dir = util.root_pattern("configre.ac", ".git", ".clangd")
+})
+
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = { "*.go" },
   callback = function ()
