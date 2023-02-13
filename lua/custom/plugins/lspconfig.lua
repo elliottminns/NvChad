@@ -31,6 +31,8 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+lspconfig.denols.setup{}
+
 lspconfig.gopls.setup {
   cmd = {"gopls", "serve"},
   cmd_env = {
@@ -48,6 +50,20 @@ lspconfig.gopls.setup {
       staticcheck = true,
     },
   },
+}
+
+lspconfig.pylsp.setup{
+  filetypes = {"python"},
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = {'W391'},
+          maxLineLength = 100
+        }
+      }
+    }
+  }
 }
 
 lspconfig.rust_analyzer.setup({

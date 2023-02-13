@@ -7,13 +7,15 @@ return {
   },
   ["christoomey/vim-tmux-navigator"] = {},
   ["mboughaba/i3config.vim"] = {},
-  ["kyazdani42/nvim-tree.lua"] = {
-    config = function()
-      require "plugins.configs.nvimtree"
-    end,
-  },
   ["aklt/plantuml-syntax"] = {},
   ["tyru/open-browser.vim"] = {},
   ["weirongxu/plantuml-previewer.vim"] = {},
-  ["github/copilot.vim"] = {},
+  ["github/copilot.vim"] = {
+    config = function()
+      vim.g.copilot_no_tab_map = true
+      vim.g.copilot_assume_mapped = true
+      vim.g.copilot_tab_fallback = ""
+    end,
+  },
+  ["akinsho/bufferline.nvim"] = false
 }
