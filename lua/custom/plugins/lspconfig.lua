@@ -96,6 +96,11 @@ lspconfig.clangd.setup({
   root_dir = util.root_pattern("configure.ac", ".git", ".clangd")
 })
 
+lspconfig.crystalline.setup({
+  filetypes = {"crystal", "cr"},
+  root_dir = util.root_pattern("shard.yml", ".git")
+})
+
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = { "*.go" },
   callback = function ()

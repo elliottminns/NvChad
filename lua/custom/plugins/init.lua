@@ -17,5 +17,6 @@ return {
       vim.g.copilot_tab_fallback = ""
     end,
   },
-  ["akinsho/bufferline.nvim"] = false
+  ["akinsho/bufferline.nvim"] = false,
+  ["vim-crystal/vim-crystal"] = {},
 }
